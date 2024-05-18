@@ -7,6 +7,8 @@ import { faCalendarDays } from '@fortawesome/free-regular-svg-icons/faCalendarDa
 import { faCar, faComment } from '@fortawesome/free-solid-svg-icons';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons/faBriefcase';
 import { faComments } from '@fortawesome/free-regular-svg-icons/faComments';
+import { faCircleQuestion } from '@fortawesome/free-regular-svg-icons/faCircleQuestion';
+import { faSliders } from '@fortawesome/free-solid-svg-icons/faSliders';
 
 function SideBar() {
   return (
@@ -42,12 +44,12 @@ function SideBar() {
       </nav>
       <nav className="p-4 flex flex-col text-[10px] gap-5 fixed bottom-0 text-center font-bold">
         <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
-          <FontAwesomeIcon icon={faChartLine} className='w-4 h-4 mb-2' />
-          <p className="block">Dashboard</p>
+          <FontAwesomeIcon icon={faCircleQuestion} className='w-4 h-4 mb-2' />
+          <p className="block">Help</p>
         </div>
         <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
-          <FontAwesomeIcon icon={faBuilding} className='w-4 h-4 mb-2' />
-          <p className="block">Org.</p>
+          <FontAwesomeIcon icon={faSliders} className='w-4 h-4 mb-2' />
+          <p className="block">Settings</p>
         </div>
       </nav>
     </div>
