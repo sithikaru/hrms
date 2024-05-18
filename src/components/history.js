@@ -10,7 +10,7 @@ const workingHistory = [
 
 const WorkingHistory = () => {
   return (
-    <div className="bg-white p-4 rounded shadow">
+    <div className="bg-white p-4 rounded rounded-xl border border-gray-200">
       <h3 className="text-lg font-bold">Working History</h3>
       <ul className="mt-4">
         {workingHistory.map((entry, index) => (

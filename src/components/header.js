@@ -17,8 +17,7 @@ export const DateTime = () => {
   };
 
   return (
-    <div>
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center ml-1 mb-7">
         <div>
           <h2 className="text-2xl font-bold text-[#122262]">Good afternoon, Sithija!</h2>
           <p className="text-gray-600 text-sm">You have 2 leave requests pending!</p>
@@ -31,7 +30,6 @@ export const DateTime = () => {
           <FontAwesomeIcon icon={faClock} className='my-auto ml-3 w-8 h-8 text-gray-700' />
         </div>
       </div>
-    </div>
   );
 };
 

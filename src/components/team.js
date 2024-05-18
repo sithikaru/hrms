@@ -10,7 +10,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <div className="bg-white p-4 rounded shadow col-span-2">
+    <div className="bg-white p-4 rounded rounded-xl border border-gray-200 col-span-2">
       <h3 className="text-lg font-bold">My Team</h3>
       <ul className="mt-4">
         {teamMembers.map((member, index) => (

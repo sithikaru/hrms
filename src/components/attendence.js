@@ -1,4 +1,10 @@
+import { faFingerprint } from '@fortawesome/free-solid-svg-icons/faFingerprint';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+
+const percentage = 67;
 
 const Attendance = () => {
   const [marked, setMarked] = useState(false);
@@ -8,30 +14,35 @@ const Attendance = () => {
   };
 
   return (
-    <div className="bg-white p-4 rounded shadow">
-      <h3 className="text-lg font-bold">Today</h3>
-      {!marked ? (
-        <>
-          <p className="text-gray-600">You have not marked yourself as present today!</p>
-          <div className="mt-4 flex items-center justify-between">
-            <div>
-              <span className="text-2xl font-bold">67%</span>
-              <span className="text-gray-600"> in office</span>
-            </div>
-            <button onClick={markPresent} className="bg-blue-500 text-white px-4 py-2 rounded">Mark Present</button>
+    <div className="bg-white p-2 pt-4 rounded-xl border border-gray-200 w-[28%]">
+      <div>
+        <div className='flex items-center justify-end px-3 pb-5'>
+          <h3 className="text-lg font-bold w-full">Today</h3>
+          <span className='bg-[#de412c] text-white rounded-full p-1 text-xs font-bold'>Absent</span>
+        </div>
+        <hr className='mx-2' />
+      </div>
+      <div className='flex flex-col pt-5 px-2'>
+        <div className='flex'>
+          <div className='w-[50%]'>
+            <FontAwesomeIcon icon={faFingerprint} className='text-[#4784ee] w-10 h-10' />
+            <p className='text-sm'>You have not marked <br /> youtself as present today!</p>
+            <p className='border-l-2 border-l-red-500 pl-2 mt-5'>Time Left : <span className='text-red-500 font-bold'>56m 44s</span></p>
           </div>
-          <p className="text-red-600 mt-2">Time left: 56m 44s</p>
-        </>
-      ) : (
-        <p className="text-green-600">You are marked as present.</p>
-      )}
-      <div className="mt-4">
-        <h3 className="text-lg font-bold">Average hours</h3>
-        <p className="text-gray-600">7h 17mins</p>
-        <h3 className="text-lg font-bold">Average check-in</h3>
-        <p className="text-gray-600">10:33 AM</p>
-        <h3 className="text-lg font-bold">Average check-out</h3>
-        <p className="text-gray-600">19:12 PM</p>
+          <div className='w-[50%] pl-4'>
+            <CircularProgressbar value={percentage} text={`${percentage}%`}
+              styles={buildStyles({
+                pathColor: `rgba(251, 208, 51, ${percentage / 100})`,
+                textColor: '#38414f',
+                trailColor: '#fafafa',
+                backgroundColor: '#fbd033',
+              })}
+            />
+          </div>
+        </div>
+        <div className='w-full h-14 bg-[#2f78ED] mt-5 rounded-lg text-white text-center font-bold flex justify-center items-center'>
+              <a href='#' className=''>Mark Present</a>
+        </div>
       </div>
     </div>
   );
