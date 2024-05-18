@@ -17,37 +17,37 @@ function SideBar() {
         <img src={logo} alt="LexCorp Logo" className="w-20 h-20" />
       </div>
       <nav className="p-4 flex flex-col text-[10px] gap-5 text-center font-bold">
-        <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
+        <div className='text-center hover:bg-[#f5f8fe]   hover:text-[#6891f1] rounded p-2'>
           <FontAwesomeIcon icon={faChartLine} className='w-4 h-4 mb-2' />
           <p className="block">Dashboard</p>
         </div>
-        <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
+        <div className='text-center hover:bg-[#f5f8fe]   hover:text-[#6891f1] rounded p-2'>
           <FontAwesomeIcon icon={faBuilding} className='w-4 h-4 mb-2' />
           <p className="block">Org.</p>
         </div>
-        <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
+        <div className='text-center hover:bg-[#f5f8fe]   hover:text-[#6891f1] rounded p-2'>
           <FontAwesomeIcon icon={faCalendarDays} className='w-4 h-4 mb-2' />
           <p className="block">Calender</p>
         </div>
-        <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
+        <div className='text-center hover:bg-[#f5f8fe]   hover:text-[#6891f1] rounded p-2'>
           <FontAwesomeIcon icon={faCar} className='w-4 h-4 mb-2' />
           <p className="block">Parkings</p>
         </div>
-        <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
+        <div className='text-center hover:bg-[#f5f8fe]   hover:text-[#6891f1] rounded p-2'>
           <FontAwesomeIcon icon={faBriefcase} className='w-4 h-4 mb-2' />
           <p className="block">Recruit</p>
         </div>
-        <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
+        <div className='text-center hover:bg-[#f5f8fe]   hover:text-[#6891f1] rounded p-2'>
           <FontAwesomeIcon icon={faComments} className='w-4 h-4 mb-2' />
           <p className="block">Messages</p>
         </div>
       </nav>
       <nav className="p-4 flex flex-col text-[10px] gap-5 fixed bottom-0 text-center font-bold">
-        <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
+        <div className='text-center hover:bg-[#f5f8fe]   hover:text-[#6891f1] rounded p-2'>
           <FontAwesomeIcon icon={faCircleQuestion} className='w-4 h-4 mb-2' />
           <p className="block">Help</p>
         </div>
-        <div className='text-center hover:bg-[#f5f8fe] text-gray-500 hover:text-[#6891f1] rounded p-2'>
+        <div className='text-center hover:bg-[#f5f8fe]   hover:text-[#6891f1] rounded p-2'>
           <FontAwesomeIcon icon={faSliders} className='w-4 h-4 mb-2' />
           <p className="block">Settings</p>
         </div>

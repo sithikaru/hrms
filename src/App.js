@@ -6,7 +6,7 @@ import Navbar from './components/navBar';
 
 function App() {
   return (
-    <div className="flex min-h-screen bg-[#FAFAFA] ">
+    <div className="flex min-h-screen bg-[#FAFAFA] text-[#122262] ">
       <SideBar />
       <div className="flex-1 flex flex-col">
         <Navbar />

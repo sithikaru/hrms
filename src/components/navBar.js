@@ -8,7 +8,7 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 const Navbar = () => {
   return (
     <div className="flex items-center justify-between bg-white p-4 shadow">
-      <nav className='flex flex-row gap-10'>
+      <nav className='flex flex-row gap-10 text-[#122262] font-bold'>
         <a href='#' className='px-5 py-2 hover:bg-[#f5f8fe] hover:text-[#6891f1] rounded-lg'>Dashboard</a>
         <a href='#' className='px-5 py-2 hover:bg-[#f5f8fe] hover:text-[#6891f1] rounded-lg'>Leave</a>
         <a href='#' className='px-5 py-2 bg-[#f5f8fe] text-[#6891f1] rounded-lg'>Attendance</a>

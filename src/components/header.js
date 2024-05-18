@@ -1,27 +1,38 @@
-import React from 'react';
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+import { faClockRotateLeft } from '@fortawesome/free-solid-svg-icons/faClockRotateLeft';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState, useEffect } from 'react';
 
-const Header = () => {
+export const DateTime = () => {
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => setDate(new Date()), 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const formatDate = (date) => {
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    return date.toLocaleDateString('en-GB', options);
+  };
+
   return (
-    <div className="bg-white p-6 rounded shadow">
+    <div>
       <div className="flex justify-between items-center">
         <div>
-          <h2 className="text-xl font-bold">Good afternoon, Sourav!</h2>
-          <p className="text-gray-600">You have 2 leave requests pending!</p>
+          <h2 className="text-2xl font-bold text-[#122262]">Good afternoon, Sithija!</h2>
+          <p className="text-gray-600 text-sm">You have 2 leave requests pending!</p>
         </div>
-        <div className="text-right">
-          <p className="text-gray-600">Current time</p>
-          <p className="text-xl font-bold">26 Sept 2023, 12:10 PM</p>
-        </div>
-      </div>
-      <div className="flex items-center mt-4 space-x-4">
-        <img src="profile-placeholder.png" alt="Profile" className="w-12 h-12 rounded-full" />
-        <div>
-          <p className="text-gray-600">Employee ID: 12345</p>
-          <p className="text-gray-600">Department: Development</p>
+        <div className="text-right bg-white py-2 px-4 rounded-xl flex">
+          <div>
+          <p className="text-gray-600 text-left">Current time</p>
+          <p className="text-xl font-bold text-gray-700">{formatDate(date)}, {date.toLocaleTimeString()}</p>
+          </div>
+          <FontAwesomeIcon icon={faClock} className='my-auto ml-3 w-8 h-8 text-gray-700' />
         </div>
       </div>
     </div>
   );
 };
 
-export default Header;
+export default DateTime;
