@@ -38,9 +38,11 @@ const Attendance = () => {
                 backgroundColor: '#fbd033',
               })}
             />
+            <p className='mt-[-45%] text-center text-sm text-gray-400'>in office</p>
+            <p className='mt-[-5%]  text-center text-sm text-[#fddf68] font-extrabold'>POOR</p>
           </div>
         </div>
-        <div className='w-full h-14 bg-[#2f78ED] mt-5 rounded-lg text-white text-center font-bold flex justify-center items-center'>
+        <div className='w-full h-14 bg-[#2f78ED] mt-12 mb-1 rounded-lg text-white text-center font-bold flex justify-center items-center'>
               <a href='#' className=''>Mark Present</a>
         </div>
       </div>
